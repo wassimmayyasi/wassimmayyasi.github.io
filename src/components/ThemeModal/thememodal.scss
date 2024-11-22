@@ -1,0 +1,14 @@
+#modal {
+    position: absolute;
+}
+.ant-modal-wrap {
+    .ant-modal-content {
+        background-color: var(--background-level-2);
+        .ant-modal-title {
+            border-bottom: 1px solid var(--text);
+        }
+        .ant-modal-header {
+            background: inherit;
+        }
+    }
+}

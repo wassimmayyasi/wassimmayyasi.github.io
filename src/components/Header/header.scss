@@ -1,0 +1,113 @@
+@import "/design-system/allStyles.scss";
+
+.header {
+    position: fixed;
+    top: 0; // Position the header at the top of the viewport
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 0 $spacing-8;
+    width: inherit;
+    max-width: inherit;
+    height: 106px;
+    background: var(--background);
+    transition: 0.5s;
+    &.menuscroll {
+        background-color: var(--background);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.4);
+        .logo {
+            color: var(--text);
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .logo {
+        color: var(--text);
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+    .ant-anchor-wrapper {
+        &::before,
+        .ant-anchor-ink {
+            display: none;
+        }
+        .ant-anchor {
+            gap: $spacing-4;
+            .ant-anchor-link {
+                padding: 0;
+                transition: 1s ease;
+                a {
+                    color: var(--text);
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+                &-active {
+                    a {
+                        color: var(--primary);
+                        font-size: 21px;
+                    }
+                }
+                &:hover {
+                    a {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+    .extra-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: $spacing-4;
+        button.ant-btn {
+            box-shadow: none;
+            width: 40px;
+            height: 40px;
+            svg {
+                color: var(--primary);
+                width: 100%;
+                height: 100%;
+            }
+            & span {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        .external {
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-2;
+            button.ant-btn {
+                background-color: var(--background-level-2);
+                &:hover {
+                    background-color: var(--primary);
+                    svg {
+                        color: var(--background-level-2);
+                    }
+                }
+            }
+        }
+        > button.ant-btn {
+            background-color: transparent;
+            box-shadow: none;
+            svg {
+                color: var(--text);
+            }
+            &:hover,
+            &:focus-visible {
+                background-color: transparent;
+                background: transparent;
+                outline: none;
+            }
+        }
+    }
+}

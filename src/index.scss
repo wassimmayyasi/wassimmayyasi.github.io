@@ -1,0 +1,52 @@
+@import "/design-system/allStyles.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// Button.scss
+.button {
+    background-color: var(--primary);
+    color: var(--text);
+
+    &:hover {
+        background-color: var(--primary-dark);
+    }
+}
+
+* {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0px;
+    flex-grow: 1;
+}
+
+.temp {
+    padding-top: 114px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--text);
+
+    .information-content {
+        max-width: 968px;
+    }
+}

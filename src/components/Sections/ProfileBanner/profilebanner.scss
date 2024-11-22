@@ -1,0 +1,27 @@
+@import "/design-system/allStyles.scss";
+
+.profile-banner {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+    cursor: default;
+    .name-and-pic {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            color: var(--primary);
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 120%;
+        }
+    }
+    .job-title h2 {
+        color: var(--text);
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+    }
+}

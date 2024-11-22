@@ -1,0 +1,40 @@
+$colors: (
+    "theme1": (
+        "primary": #66cdaa,
+        "primary-dark": #489279,
+        "primary-light": #bdeada,
+        "secondary": #ffdab9,
+        "secondary-dark": #c0392b,
+        "secondary-light": #f1948a,
+    ),
+    "theme2": (
+        "primary": #27ae60,
+        "primary-dark": #229954,
+        "primary-light": #58d68d,
+        "secondary": #f39c12,
+        "secondary-dark": #e67e22,
+        "secondary-light": #f7b558,
+    ),
+);
+
+$themes: (
+    "light": (
+        "background": #ffffff,
+        "background-level-2": #fff3f3d7,
+        "text": #1c1c1c,
+    ),
+    "dark": (
+        "background": #1c1c1c,
+        "background-level-2": #212121,
+        "text": #ffffff,
+    ),
+);
+
+// Helper functions for map-get
+@function get-color($theme, $shade) {
+    @return map-get(map-get($colors, $theme), $shade);
+}
+
+@function get-theme-value($mode, $key) {
+    @return map-get(map-get($themes, $mode), $key);
+}

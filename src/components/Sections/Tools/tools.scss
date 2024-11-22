@@ -1,0 +1,41 @@
+.tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    .tool {
+        display: flex;
+        width: 180px;
+        height: 180px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-radius: 50%;
+        background: var(--background-level-2);
+        transition: 1s;
+        cursor: default;
+        .tool-name {
+            color: var(--text);
+            text-align: center;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 120%;
+        }
+        svg {
+            height: 60px;
+            width: auto;
+            color: var(--primary);
+        }
+
+        &:hover {
+            background: var(--primary);
+            .tool-name,
+            svg {
+                color: var(--background-level-2);
+            }
+        }
+    }
+}

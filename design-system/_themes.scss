@@ -1,0 +1,20 @@
+@import "variables";
+
+@each $theme, $theme-colors in $colors {
+    .#{$theme}-theme {
+        --primary: #{get-color($theme, "primary")};
+        --primary-dark: #{get-color($theme, "primary-dark")};
+        --primary-light: #{get-color($theme, "primary-light")};
+        --secondary: #{get-color($theme, "secondary")};
+        --secondary-dark: #{get-color($theme, "secondary-dark")};
+        --secondary-light: #{get-color($theme, "secondary-light")};
+    }
+}
+
+@each $mode, $theme-values in $themes {
+    .#{$mode}-mode {
+        --background: #{get-theme-value($mode, "background")};
+        --background-level-2: #{get-theme-value($mode, "background-level-2")};
+        --text: #{get-theme-value($mode, "text")};
+    }
+}
