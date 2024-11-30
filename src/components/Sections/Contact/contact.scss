@@ -1,0 +1,18 @@
+.contact-me {
+    border-radius: 60px;
+    background: var(--Background-Level-2, #212121);
+
+    box-shadow: -1px 1px 14.4px 0px var(--Shadow, rgba(102, 205, 170, 0.6));
+    display: flex;
+    width: 946px;
+    padding: 48px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    .title {
+        color: var(--primary);
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+}

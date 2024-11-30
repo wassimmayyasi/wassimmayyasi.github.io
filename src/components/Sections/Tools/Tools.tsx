@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa";
-import Section from "../Section/Section";
+import Section from "../../Section/Section";
 import { DiCss3, DiHtml5 } from "react-icons/di";
 import Tool, { ToolType } from "./Tool";
 import "./tools.scss";

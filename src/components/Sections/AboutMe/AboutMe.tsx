@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Section from "../Section/Section";
+import Section from "../../Section/Section";
 import "./aboutme.scss";
 
 export default function AboutMe() {
