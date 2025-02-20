@@ -1,0 +1,69 @@
+@import "/design-system/allStyles.scss";
+
+form.ant-form {
+    width: 100%;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-1;
+    .ant-form-item {
+        .label {
+            color: var(--text);
+        }
+        .required-star,
+        .ant-form-item-explain-error {
+            color: $danger-400;
+        }
+        .ant-form-item-control-input-content {
+            .ant-input-affix-wrapper,
+            textarea,
+            input {
+                color: var(--primary);
+                border-radius: $border-radius-xlarge;
+                &,
+                &:focus,
+                &:hover {
+                    border-color: var(--primary);
+                    background-color: transparent;
+                }
+                &::placeholder {
+                    color: var(--primary);
+                    opacity: 0.5;
+                }
+            }
+            input,
+            textarea {
+                padding: $spacing-2 $spacing-4;
+                &::-webkit-scrollbar {
+                    background-color: transparent;
+                    width: 30px;
+                }
+                ::-webkit-scrollbar-track {
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: var(--primary);
+                    border-radius: $border-radius-large;
+                    border: 12px solid transparent;
+                    background-clip: content-box;
+                }
+            }
+            .ant-input-data-count {
+                color: var(--primary);
+                font-size: 11px;
+            }
+            button.ant-btn {
+                color: var(--primary);
+                background-color: transparent;
+                border: 1px var(--primary) solid;
+                border-radius: $border-radius-xlarge;
+                font-size: 16px;
+                font-weight: 600;
+                padding: $spacing-2 $spacing-4;
+                height: fit-content;
+                width: fit-content;
+                margin-top: $spacing-2;
+            }
+        }
+    }
+}
