@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineBrush } from "react-icons/md";
 import ThemeModal from "../ThemeModal/ThemeModal";
+import { navItems } from "../../utils";
 
 const { Header } = Layout;
 
@@ -36,35 +37,14 @@ export default function MyHeader() {
         <Header className={`header ${headerClassName}`}>
             <div
                 className="logo"
-                onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
             >
                 <h2>Wassim Mayyasi</h2>
             </div>
             <Anchor
                 direction="horizontal"
                 affix={false}
-                items={[
-                    {
-                        key: "1",
-                        href: "#about",
-                        title: "About",
-                    },
-                    {
-                        key: "2",
-                        href: "#experience",
-                        title: "Experience",
-                    },
-                    {
-                        key: "3",
-                        href: "#skills",
-                        title: "Skills",
-                    },
-                    {
-                        key: "4",
-                        href: "#projects",
-                        title: "Projects",
-                    },
-                ]}
+                items={navItems.map((item, index) => ({ ...item, key: index }))}
             />
             <div className="extra-details">
                 <div className="external">

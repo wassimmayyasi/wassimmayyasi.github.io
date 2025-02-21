@@ -8,18 +8,4 @@
         font-weight: 700;
         line-height: 120%;
     }
-    .line-with-dots {
-        stroke: var(--primary);
-        height: auto;
-        display: block;
-        overflow: visible;
-        .dot {
-            fill: var(--primary);
-            r: 1;
-        }
-
-        .line {
-            stroke: var(--primary);
-        }
-    }
 }

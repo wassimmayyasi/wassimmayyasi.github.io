@@ -1,3 +1,5 @@
+import { Layout } from "antd";
+import MyFooter from "./components/Footer/Footer";
 import MyHeader from "./components/Header/Header";
 import AboutMe from "./components/Sections/AboutMe/AboutMe";
 import Contact from "./components/Sections/Contact/Contact";
@@ -10,10 +12,10 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 function App() {
     return (
         <ThemeProvider>
-            <div className="container">
+            <Layout className="container">
                 <MyHeader />
-                <div className="information-content">
-                    <div className="temp">
+                <Layout className="information-content">
+                    <div id="home" className="temp">
                         <ProfileBanner />
                     </div>
                     <div className="temp">
@@ -22,7 +24,10 @@ function App() {
                     <div id="about" className="temp">
                         <AboutMe />
                     </div>
-                    <div id="experience" className="temp">
+                    <div id="tools" className="temp">
+                        <Tools />
+                    </div>
+                    <div id="experiences" className="temp">
                         <Tools />
                     </div>
                     <div id="projects" className="temp">
@@ -31,8 +36,9 @@ function App() {
                     <div id="contact" className="temp">
                         <Contact />
                     </div>
-                </div>
-            </div>
+                </Layout>
+                <MyFooter />
+            </Layout>
         </ThemeProvider>
     );
 }

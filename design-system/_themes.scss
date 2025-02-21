@@ -15,6 +15,7 @@
     .#{$mode}-mode {
         --background: #{get-theme-value($mode, "background")};
         --background-level-2: #{get-theme-value($mode, "background-level-2")};
+        --footer-background: #{get-theme-value($mode, "footer-background")};
         --text: #{get-theme-value($mode, "text")};
     }
 }

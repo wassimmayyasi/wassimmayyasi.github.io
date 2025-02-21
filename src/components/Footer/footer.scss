@@ -1,0 +1,117 @@
+@import "/design-system/allStyles.scss";
+
+footer.footer {
+    background-color: var(--footer-background);
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    padding: $spacing-6 $spacing-12;
+    align-items: center;
+    margin-top: $spacing-8;
+    .title {
+        cursor: default;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+        gap: $spacing-4;
+        line-height: 46px;
+        color: var(--text);
+        svg {
+            width: 32px;
+            height: auto;
+        }
+    }
+    .nav-and-extra {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-5;
+        justify-content: center;
+        align-items: center;
+        .nav {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            a {
+                text-decoration: none;
+                color: var(--text);
+                font-size: 20px;
+                line-height: 30px;
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+        .extra-details {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $spacing-4;
+            button.ant-btn {
+                box-shadow: none;
+                width: 40px;
+                height: 40px;
+                svg {
+                    color: var(--primary);
+                    width: 100%;
+                    height: 100%;
+                }
+                & span {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            .external {
+                display: flex;
+                flex-direction: row;
+                gap: $spacing-2;
+                button.ant-btn {
+                    background-color: var(--background-level-2);
+                    &:hover {
+                        background-color: var(--primary);
+                        svg {
+                            color: var(--background-level-2);
+                        }
+                    }
+                }
+            }
+            > button.ant-btn {
+                background-color: transparent;
+                box-shadow: none;
+                svg {
+                    color: var(--text);
+                }
+                &:hover,
+                &:focus-visible {
+                    background-color: transparent;
+                    background: transparent;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .credits {
+        display: flex;
+        flex-direction: column;
+        max-width: 1250px;
+        align-items: center;
+        width: 100%;
+        .people {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 700px;
+            & > div {
+                display: flex;
+                flex-direction: row;
+                gap: $spacing-2;
+                p,
+                a {
+                    font-size: 18px;
+                    color: var(--text);
+                }
+            }
+        }
+    }
+}
