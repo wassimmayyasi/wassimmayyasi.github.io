@@ -6,6 +6,7 @@ import Contact from "./components/Sections/Contact/Contact";
 import ProfileBanner from "./components/Sections/ProfileBanner/ProfileBanner";
 import Projects from "./components/Sections/Projects/Projects";
 import Stats from "./components/Sections/Stats/Stats";
+import Experiences from "./components/Sections/Experiences/Experiences";
 import Tools from "./components/Sections/Tools/Tools";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
@@ -28,7 +29,7 @@ function App() {
                         <Tools />
                     </div>
                     <div id="experiences" className="temp">
-                        <Tools />
+                        <Experiences />
                     </div>
                     <div id="projects" className="temp">
                         <Projects />

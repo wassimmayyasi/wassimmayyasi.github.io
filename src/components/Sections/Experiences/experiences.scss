@@ -1,0 +1,43 @@
+@import "/design-system/allStyles.scss";
+
+.experiences {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    svg {
+        overflow: visible;
+        max-width: 1150px;
+    }
+    .exp-info {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        background: transparent;
+        padding: 20px;
+        border-radius: $border-radius-xlarge;
+        box-shadow: -1px 1px 14.4px 0px rgba(102, 205, 170, 0.6);
+        gap: $spacing-1;
+        max-width: 420px;
+        .exp-details {
+            display: flex;
+            flex-direction: column;
+            .title {
+                color: #c6c6c6;
+                font-size: 12px;
+                font-weight: 400;
+            }
+            .company-and-dates {
+                display: flex;
+                flex-direction: row;
+                gap: $spacing-1;
+                p {
+                    font-size: 11px;
+                    color: var(--text);
+                    font-weight: 500;
+                }
+            }
+        }
+        // .description {
+        // }
+    }
+}

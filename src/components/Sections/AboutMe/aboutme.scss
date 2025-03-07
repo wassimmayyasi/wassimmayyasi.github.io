@@ -1,7 +1,14 @@
 .about-me {
-    color: var(--text);
+    color: transparent;
     text-align: center;
     font-size: 22px;
     font-weight: 400;
     line-height: 120%;
+    position: relative;
+    &.background {
+        position: absolute;
+        color: var(--text);
+        width: 100%;
+        top: calc(65px + 48px);
+    }
 }

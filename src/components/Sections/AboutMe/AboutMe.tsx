@@ -9,7 +9,10 @@ export default function AboutMe() {
 
     return (
         <Section title="About Me">
-            <p className="about-me">{state}</p>
+            <>
+                <p className="about-me background">{state}</p>
+                <p className="about-me">{text}</p>
+            </>
         </Section>
     );
 }
