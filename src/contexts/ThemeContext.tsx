@@ -1,35 +1,33 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
+import { ThemeOptions } from "../types";
 
 // Define the type for the context state
 interface ThemeContextType {
-    theme: string;
+    theme: ThemeOptions;
     mode: string;
-    toggleTheme: (newTheme: string) => void;
+    toggleTheme: (newTheme: ThemeOptions) => void;
     toggleMode: (newMode: string) => void;
 }
 
 // Define default values for the context
 const defaultContext: ThemeContextType = {
-    theme: "theme1",
-    mode: "light",
+    theme: "coastal-sunset",
+    mode: "dark",
     toggleTheme: () => {},
     toggleMode: () => {},
 };
 
-// Create the context
 const ThemeContext = createContext<ThemeContextType>(defaultContext);
 
-// Define props for the ThemeProvider component
 interface ThemeProviderProps {
     children: ReactNode;
 }
 
-// Create the ThemeProvider component
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-    const [theme, setTheme] = useState<string>("theme1");
-    const [mode, setMode] = useState<string>("light");
+    const [theme, setTheme] = useState<ThemeOptions>("coastal-sunset");
+    const [mode, setMode] = useState<string>("dark");
 
-    const toggleTheme = (newTheme: string) => setTheme(newTheme);
+    const toggleTheme = (newTheme: ThemeOptions) => setTheme(newTheme);
     const toggleMode = (newMode: string) => setMode(newMode);
 
     return (
@@ -39,5 +37,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     );
 };
 
-// Custom hook for consuming the ThemeContext
 export const useTheme = () => useContext(ThemeContext);

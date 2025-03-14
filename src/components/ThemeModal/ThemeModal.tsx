@@ -1,6 +1,7 @@
 import { Modal } from "antd";
 import "./thememodal.scss";
-import { useTheme } from "../../contexts/ThemeContext";
+import ModesRadioGroup from "./ModesRadioGroup/ModesRadioGroup";
+import ThemesRadioGroup from "./ThemesRadioGroup/ThemesRadioGroup";
 
 interface Props {
     isOpen: boolean;
@@ -8,16 +9,16 @@ interface Props {
 }
 
 const ThemeControls = () => {
-    const { toggleTheme, toggleMode } = useTheme();
-
     return (
-        <div>
-            <select onChange={(e) => toggleTheme(e.target.value)}>
-                <option value="theme1">Theme 1</option>
-                <option value="theme2">Theme 2</option>
-            </select>
-            <button onClick={() => toggleMode("light")}>Light Mode</button>
-            <button onClick={() => toggleMode("dark")}>Dark Mode</button>
+        <div className="theme-controls">
+            <div className="mode">
+                <p>Mode</p>
+                <ModesRadioGroup />
+            </div>
+            <div className="themes">
+                <p>Themes</p>
+                <ThemesRadioGroup />
+            </div>
         </div>
     );
 };
@@ -28,14 +29,13 @@ export default function ThemeModal(props: Props) {
         <>
             <div id="modal"></div>
             <Modal
-                title="Theme Customization"
+                title="Display Settings"
                 open={isOpen}
                 centered
+                footer={null}
                 onCancel={closeModal}
-                onClose={closeModal}
                 getContainer={document.getElementById("modal")!}
             >
-                <p>Test content</p>
                 <ThemeControls />
             </Modal>
         </>

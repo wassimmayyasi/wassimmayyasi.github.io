@@ -1,19 +1,31 @@
 $colors: (
-    "theme1": (
+    "coastal-sunset": (
         "primary": #66cdaa,
-        "primary-dark": #489279,
-        "primary-light": #bdeada,
         "secondary": #ffdab9,
-        "secondary-dark": #c0392b,
-        "secondary-light": #f1948a,
+        "path-start": #9fe0c9,
+        "path-stop": #489279,
+        "box-shadow": -1px 1px 14.4px 0px #66cdaa99,
     ),
-    "theme2": (
-        "primary": #27ae60,
-        "primary-dark": #229954,
-        "primary-light": #58d68d,
-        "secondary": #f39c12,
-        "secondary-dark": #e67e22,
-        "secondary-light": #f7b558,
+    "mint-lavender": (
+        "primary": #77dd77,
+        "secondary": #cbc3e3,
+        "path-start": #a9eaa9,
+        "path-stop": #549d54,
+        "box-shadow": -1px 1px 14.4px 0px #77dd7799,
+    ),
+    "blossom-breeze": (
+        "primary": #ffb6c1,
+        "secondary": #98ff98,
+        "path-start": #ffd1d8,
+        "path-stop": #b58189,
+        "box-shadow": -1px 1px 14.4px 0px #ffb6c199,
+    ),
+    "periwinkle-mist": (
+        "primary": #b68cb8,
+        "secondary": #b3d1ff,
+        "path-start": #d1b7d2,
+        "path-stop": #816383,
+        "box-shadow": -1px 1px 14.4px 0px #b68cb899,
     ),
 );
 

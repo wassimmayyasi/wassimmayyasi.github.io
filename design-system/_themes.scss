@@ -3,11 +3,10 @@
 @each $theme, $theme-colors in $colors {
     .#{$theme}-theme {
         --primary: #{get-color($theme, "primary")};
-        --primary-dark: #{get-color($theme, "primary-dark")};
-        --primary-light: #{get-color($theme, "primary-light")};
         --secondary: #{get-color($theme, "secondary")};
-        --secondary-dark: #{get-color($theme, "secondary-dark")};
-        --secondary-light: #{get-color($theme, "secondary-light")};
+        --box-shadow: #{get-color($theme, "box-shadow")};
+        --path-start: #{get-color($theme, "path-start")};
+        --path-stop: #{get-color($theme, "path-stop")};
     }
 }
 

@@ -87,12 +87,6 @@ export default function ScrollPathAnimation(props: Props) {
                         tl.progress(maxProgress.current);
                     }
                 },
-
-                snap: {
-                    snapTo: [0, 0.27, 0.63, 1],
-                    duration: 1,
-                    ease: "power1.inOut",
-                },
             },
         });
 
@@ -148,8 +142,8 @@ export default function ScrollPathAnimation(props: Props) {
                         y2="2140"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0" stopColor="#9FE0C9" />
-                        <stop offset="1" stopColor="#489279" />
+                        <stop offset="0" stopColor="var(--path-start)" />
+                        <stop offset="1" stopColor="var(--path-stop)" />
                     </linearGradient>
                 </defs>
                 <path
@@ -165,7 +159,7 @@ export default function ScrollPathAnimation(props: Props) {
                     strokeWidth={28}
                     fill="none"
                 />
-                <circle ref={circleRef} cx="700" cy="0" r="8" fill="#FDD35C" />
+                <circle ref={circleRef} cx="700" cy="0" r="8" fill="var(--secondary)" />
             </svg>
             <SquaresDisplay items={experiences} squaresRefs={squaresRefs} />
         </>

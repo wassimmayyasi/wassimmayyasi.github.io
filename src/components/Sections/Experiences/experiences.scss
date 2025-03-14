@@ -15,7 +15,7 @@
         background: transparent;
         padding: 20px;
         border-radius: $border-radius-xlarge;
-        box-shadow: -1px 1px 14.4px 0px rgba(102, 205, 170, 0.6);
+        box-shadow: var(--box-shadow);
         gap: $spacing-1;
         max-width: 420px;
         .exp-details {

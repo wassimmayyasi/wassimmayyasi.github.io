@@ -1,0 +1,31 @@
+@import "/design-system/allStyles.scss";
+
+div.modes-radio.ant-radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-4;
+    .ant-radio-button-wrapper {
+        border: 1px solid var(--text);
+        border-radius: $border-radius-xlarge;
+        background: transparent;
+        display: flex;
+        &::before {
+            display: none;
+        }
+        &-checked {
+            border-color: var(--primary);
+            outline: 3px solid var(--primary);
+        }
+        &:hover {
+            border-color: var(--primary);
+        }
+        span {
+            color: var(--text);
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-2;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

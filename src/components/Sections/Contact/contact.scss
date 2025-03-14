@@ -4,7 +4,7 @@
     border-radius: 60px;
     background: var(--background-level-2);
 
-    box-shadow: -1px 1px 14.4px 0px var(--Shadow, rgba(102, 205, 170, 0.6));
+    box-shadow: var(--box-shadow);
     display: flex;
     width: 946px;
     padding: 48px;
