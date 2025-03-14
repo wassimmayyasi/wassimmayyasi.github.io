@@ -1,0 +1,44 @@
+.scroll-indicator {
+    position: fixed;
+    left: 50%;
+    bottom: 180px;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.scroll-indicator::before {
+    content: "";
+    width: 4px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+}

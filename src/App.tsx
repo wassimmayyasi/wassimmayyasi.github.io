@@ -9,32 +9,34 @@ import Stats from "./components/Sections/Stats/Stats";
 import Experiences from "./components/Sections/Experiences/Experiences";
 import Tools from "./components/Sections/Tools/Tools";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
 
 function App() {
     return (
         <ThemeProvider>
             <Layout className="container">
                 <MyHeader />
+                <ScrollIndicator />
                 <Layout className="information-content">
-                    <div id="home" className="temp">
+                    <div id="home" className="grouping">
                         <ProfileBanner />
                     </div>
-                    <div className="temp">
+                    <div className="grouping">
                         <Stats />
                     </div>
-                    <div id="about" className="temp">
+                    <div id="about" className="grouping">
                         <AboutMe />
                     </div>
-                    <div id="tools" className="temp">
+                    <div id="tools" className="grouping">
                         <Tools />
                     </div>
-                    <div id="experiences" className="temp">
+                    <div id="experiences" className="grouping">
                         <Experiences />
                     </div>
-                    <div id="projects" className="temp">
+                    <div id="projects" className="grouping">
                         <Projects />
                     </div>
-                    <div id="contact" className="temp">
+                    <div id="contact" className="grouping">
                         <Contact />
                     </div>
                 </Layout>

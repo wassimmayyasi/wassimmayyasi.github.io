@@ -8,7 +8,8 @@
     .name-and-pic {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: $spacing-10;
         align-items: center;
         h1 {
             color: var(--primary);
