@@ -1,53 +1,82 @@
 $colors: (
     "coastal-sunset": (
-        "primary": #66cdaa,
-        "secondary": #ffdab9,
-        "path-start": #9fe0c9,
-        "path-stop": #489279,
-        "box-shadow": -1px 1px 14.4px 0px #66cdaa99,
+        "light": (
+            "primary": #008c74,
+            "secondary": #e8a77c,
+            "path-start": #5eb7a7,
+            "path-stop": #006352,
+            "box-shadow": -1px 1px 14.4px 0px #008c7499,
+        ),
+        "dark": (
+            "primary": #66cdaa,
+            "secondary": #ffdab9,
+            "path-start": #9fe0c9,
+            "path-stop": #489279,
+            "box-shadow": -1px 1px 14.4px 0px #66cdaa99,
+        ),
     ),
     "mint-lavender": (
-        "primary": #77dd77,
-        "secondary": #cbc3e3,
-        "path-start": #a9eaa9,
-        "path-stop": #549d54,
-        "box-shadow": -1px 1px 14.4px 0px #77dd7799,
+        "light": (
+            "primary": #449d44,
+            "secondary": #8a7bba,
+            "path-start": #89c189,
+            "path-stop": #306f30,
+            "box-shadow": -1px 1px 14.4px 0px #449d4499,
+        ),
+        "dark": (
+            "primary": #77dd77,
+            "secondary": #cbc3e3,
+            "path-start": #a9eaa9,
+            "path-stop": #549d54,
+            "box-shadow": -1px 1px 14.4px 0px #77dd7799,
+        ),
     ),
     "blossom-breeze": (
-        "primary": #ffb6c1,
-        "secondary": #98ff98,
-        "path-start": #ffd1d8,
-        "path-stop": #b58189,
-        "box-shadow": -1px 1px 14.4px 0px #ffb6c199,
+        "light": (
+            "primary": #d45b7a,
+            "secondary": #5bb85b,
+            "path-start": #e498ab,
+            "path-stop": #974157,
+            "box-shadow": -1px 1px 14.4px 0px #d45b7a99,
+        ),
+        "dark": (
+            "primary": #ffb6c1,
+            "secondary": #98ff98,
+            "path-start": #ffd1d8,
+            "path-stop": #b58189,
+            "box-shadow": -1px 1px 14.4px 0px #ffb6c199,
+        ),
     ),
     "periwinkle-mist": (
-        "primary": #b68cb8,
-        "secondary": #b3d1ff,
-        "path-start": #d1b7d2,
-        "path-stop": #816383,
-        "box-shadow": -1px 1px 14.4px 0px #b68cb899,
+        "light": (
+            "primary": #6d3e8b,
+            "secondary": #2c74b3,
+            "path-start": #a385b6,
+            "path-stop": #4d2c63,
+            "box-shadow": -1px 1px 14.4px 0px #6d3e8b99,
+        ),
+        "dark": (
+            "primary": #b68cb8,
+            "secondary": #b3d1ff,
+            "path-start": #d1b7d2,
+            "path-stop": #816383,
+            "box-shadow": -1px 1px 14.4px 0px #b68cb899,
+        ),
     ),
 );
 
 $themes: (
     "light": (
         "background": #ffffff,
-        "background-level-2": #fff3f3d7,
-        "footer-background": #f5e9e9d7,
+        "background-level-2": #f8f8f8,
         "text": #1c1c1c,
     ),
     "dark": (
         "background": #1c1c1c,
         "background-level-2": #212121,
-        "footer-background": #191919,
         "text": #ffffff,
     ),
 );
-
-// Helper functions for map-get
-@function get-color($theme, $shade) {
-    @return map-get(map-get($colors, $theme), $shade);
-}
 
 @function get-theme-value($mode, $key) {
     @return map-get(map-get($themes, $mode), $key);

@@ -32,7 +32,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     return (
         <ThemeContext.Provider value={{ theme, mode, toggleTheme, toggleMode }}>
-            <div className={`${theme}-theme ${mode}-mode`}>{children}</div>
+            <div className={`${theme}-${mode}-theme ${mode}-mode`}>{children}</div>
         </ThemeContext.Provider>
     );
 };

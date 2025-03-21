@@ -1,12 +1,14 @@
 @import "variables";
 
-@each $theme, $theme-colors in $colors {
-    .#{$theme}-theme {
-        --primary: #{get-color($theme, "primary")};
-        --secondary: #{get-color($theme, "secondary")};
-        --box-shadow: #{get-color($theme, "box-shadow")};
-        --path-start: #{get-color($theme, "path-start")};
-        --path-stop: #{get-color($theme, "path-stop")};
+@each $theme, $theme-modes in $colors {
+    @each $mode, $color-values in $theme-modes {
+        .#{$theme}-#{$mode}-theme {
+            --primary: #{map-get($color-values, "primary")};
+            --secondary: #{map-get($color-values, "secondary")};
+            --box-shadow: #{map-get($color-values, "box-shadow")};
+            --path-start: #{map-get($color-values, "path-start")};
+            --path-stop: #{map-get($color-values, "path-stop")};
+        }
     }
 }
 
@@ -14,7 +16,6 @@
     .#{$mode}-mode {
         --background: #{get-theme-value($mode, "background")};
         --background-level-2: #{get-theme-value($mode, "background-level-2")};
-        --footer-background: #{get-theme-value($mode, "footer-background")};
         --text: #{get-theme-value($mode, "text")};
     }
 }

@@ -1,6 +1,6 @@
 import { EnvironmentFilled, MailFilled, PhoneFilled } from "@ant-design/icons";
 import Section from "../../Section/Section";
-import image from "../../../assets/images/contact-me.svg";
+import ContactMePic from "../../../assets/images/contact-me.svg?react";
 import "./contact.scss";
 import ContactForm from "./ContactForm";
 
@@ -28,7 +28,7 @@ export default function Contact() {
                 <div className="form-and-details">
                     <ContactForm />
                     <div className="details">
-                        <img src={image} />
+                        <ContactMePic />
                         <div className="contact-info">
                             {contactInfo.map((item, index) => (
                                 <div
