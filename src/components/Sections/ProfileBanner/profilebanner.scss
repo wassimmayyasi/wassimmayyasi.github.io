@@ -25,4 +25,44 @@
         line-height: 120%;
         text-align: center;
     }
+    @media (max-width: 1050px) {
+        gap: $spacing-5;
+        .name-and-pic {
+            gap: $spacing-7;
+            h1 {
+                font-size: 48px;
+            }
+        }
+        .job-title h2 {
+            font-size: 42px;
+        }
+        img {
+            width: 360px;
+        }
+    }
+    @media (max-width: 815px) {
+        .name-and-pic {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        .job-title h2 {
+            font-size: 30px;
+        }
+        img {
+            width: 230px;
+        }
+    }
+    @media (max-width: 630px) {
+        gap: $spacing-3;
+        .name-and-pic {
+            gap: $spacing-4;
+            h1 {
+                font-size: 24px;
+            }
+        }
+        img {
+            width: 130px;
+        }
+    }
 }

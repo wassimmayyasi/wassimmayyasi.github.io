@@ -2,6 +2,7 @@ import { Modal } from "antd";
 import "./thememodal.scss";
 import ModesRadioGroup from "./ModesRadioGroup/ModesRadioGroup";
 import ThemesRadioGroup from "./ThemesRadioGroup/ThemesRadioGroup";
+import PandaThemePic from "../../assets/images/pandatheme.svg?react";
 
 interface Props {
     isOpen: boolean;
@@ -19,6 +20,7 @@ const ThemeControls = () => {
                 <p>Themes</p>
                 <ThemesRadioGroup />
             </div>
+            <PandaThemePic />
         </div>
     );
 };

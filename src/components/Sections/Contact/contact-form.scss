@@ -66,4 +66,7 @@ form.ant-form {
             }
         }
     }
+    @media (max-width: 700px) {
+        max-width: 100%;
+    }
 }

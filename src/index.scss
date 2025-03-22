@@ -27,7 +27,13 @@
 }
 
 .grouping {
-    padding: 114px $spacing-4 0;
+    padding: 114px 0 0;
+    @media (max-width: 700px) {
+        padding: 57px 0 0;
+        &:first-child {
+            padding: 84px 0 0;
+        }
+    }
 }
 
 .container {
@@ -36,9 +42,9 @@
     justify-content: center;
     background-color: var(--background);
     color: var(--text);
+    overflow: hidden;
 
     .information-content {
-        max-width: 1250px;
         background: transparent;
         align-self: center;
     }

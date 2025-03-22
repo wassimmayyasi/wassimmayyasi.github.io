@@ -20,8 +20,8 @@ export default function ThemesRadioGroup() {
             value={theme}
             style={{ width: "100%" }}
         >
-            {colorOptions.map((option) => (
-                <Radio value={option.value} className={option.value}>
+            {colorOptions.map((option, index) => (
+                <Radio value={option.value} className={option.value} key={index}>
                     <div className="circle"></div>
                     {option.label}
                 </Radio>

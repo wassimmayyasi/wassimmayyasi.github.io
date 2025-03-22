@@ -5,6 +5,8 @@
     align-content: center;
     gap: 64px;
     flex-wrap: wrap;
+    max-width: 1150px;
+    padding: 0 32px;
     .tool {
         display: flex;
         width: 180px;
@@ -37,5 +39,23 @@
                 color: var(--background-level-2);
             }
         }
+        @media (max-width: 700px) {
+            width: 140px;
+            height: 140px;
+            gap: 12px;
+            .tool-name {
+                font-size: 24px;
+            }
+            svg {
+                height: 50px;
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        gap: 48px;
+    }
+    @media (max-width: 500px) {
+        gap: 24px;
+        padding: 0 12px;
     }
 }

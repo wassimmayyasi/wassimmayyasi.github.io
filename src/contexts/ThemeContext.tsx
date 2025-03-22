@@ -1,7 +1,6 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 import { ThemeOptions } from "../types";
 
-// Define the type for the context state
 interface ThemeContextType {
     theme: ThemeOptions;
     mode: string;
@@ -9,10 +8,9 @@ interface ThemeContextType {
     toggleMode: (newMode: string) => void;
 }
 
-// Define default values for the context
 const defaultContext: ThemeContextType = {
     theme: "coastal-sunset",
-    mode: "dark",
+    mode: "system",
     toggleTheme: () => {},
     toggleMode: () => {},
 };
@@ -23,16 +21,69 @@ interface ThemeProviderProps {
     children: ReactNode;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-    const [theme, setTheme] = useState<ThemeOptions>("coastal-sunset");
-    const [mode, setMode] = useState<string>("dark");
+function getSystemMode(): "dark" | "light" {
+    if (typeof window !== "undefined" && window.matchMedia) {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    return "dark";
+}
 
-    const toggleTheme = (newTheme: ThemeOptions) => setTheme(newTheme);
-    const toggleMode = (newMode: string) => setMode(newMode);
+function getInitialMode(): string {
+    if (typeof window !== "undefined") {
+        const storedMode = localStorage.getItem("mode");
+        if (storedMode) return storedMode;
+    }
+    return "system";
+}
+
+function getInitialTheme(): ThemeOptions {
+    if (typeof window !== "undefined") {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme) return storedTheme as ThemeOptions;
+    }
+    return "coastal-sunset";
+}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+    const [theme, setTheme] = useState<ThemeOptions>(getInitialTheme());
+    const [mode, setMode] = useState<string>(getInitialMode());
+    const [effectiveMode, setEffectiveMode] = useState<"dark" | "light">(
+        mode === "system" ? getSystemMode() : (mode as "dark" | "light")
+    );
+
+    useEffect(() => {
+        if (mode === "system") {
+            setEffectiveMode(getSystemMode());
+            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+            const handler = (e: MediaQueryListEvent) => {
+                setEffectiveMode(e.matches ? "dark" : "light");
+            };
+            mediaQuery.addEventListener("change", handler);
+            return () => mediaQuery.removeEventListener("change", handler);
+        } else {
+            setEffectiveMode(mode as "dark" | "light");
+        }
+    }, [mode]);
+
+    const toggleTheme = (newTheme: ThemeOptions) => {
+        setTheme(newTheme);
+        if (typeof window !== "undefined") {
+            localStorage.setItem("theme", newTheme);
+        }
+    };
+
+    const toggleMode = (newMode: string) => {
+        setMode(newMode);
+        if (typeof window !== "undefined") {
+            localStorage.setItem("mode", newMode);
+        }
+    };
 
     return (
         <ThemeContext.Provider value={{ theme, mode, toggleTheme, toggleMode }}>
-            <div className={`${theme}-${mode}-theme ${mode}-mode`}>{children}</div>
+            <div id="theme-wrapper" className={`${theme}-${effectiveMode}-theme ${effectiveMode}-mode`}>
+                {children}
+            </div>
         </ThemeContext.Provider>
     );
 };

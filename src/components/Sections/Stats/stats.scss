@@ -1,34 +1,72 @@
-.stats {
-    display: flex;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
+.stats-bg {
     background: var(--background-level-2);
-    .stat {
-        padding: 12px 80px;
+    width: 100vw;
+    display: flex;
+    padding: 12px 0;
+    justify-content: center;
+    .stats {
         display: flex;
-        flex-direction: column;
-        gap: 12px;
-        border-right: 1px solid var(--secondary);
-        .number {
-            color: var(--secondary);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        .full-stat {
             display: flex;
-            flex-direction: row;
-            gap: 2px;
-            * {
-                font-size: 36px;
-                font-weight: 700;
-                line-height: 120%;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border-right: 1px solid var(--secondary);
+            &:last-child {
+                border: none;
+            }
+            .stat {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: fit-content;
+                padding: 0 62px;
+                .number {
+                    color: var(--secondary);
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2px;
+                    * {
+                        font-size: 36px;
+                        font-weight: 700;
+                        line-height: 120%;
+                    }
+                }
+                .title {
+                    color: var(--secondary);
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+
+                @media (max-width: 860px) {
+                    padding: 0 36px;
+                    .number {
+                        * {
+                            font-size: 28px;
+                        }
+                    }
+                }
+                @media (max-width: 700px) {
+                    padding: 0 12px;
+                    .title {
+                        font-size: 12px;
+                    }
+                }
+                @media (max-width: 403px) {
+                    padding: 0 8px;
+                    .title {
+                        font-size: 10px;
+                    }
+                }
             }
         }
-        .title {
-            color: var(--secondary);
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 120%;
-        }
-        &:last-child {
-            border: none;
-        }
+    }
+    @media (max-width: 403px) {
+        padding: 12px 8px;
     }
 }

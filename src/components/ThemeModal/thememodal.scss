@@ -6,6 +6,11 @@
 .ant-modal-wrap {
     .ant-modal-content {
         background-color: var(--background-level-2);
+        .ant-modal-close {
+            span {
+                color: var(--text);
+            }
+        }
         .ant-modal-title {
             border-bottom: 1px solid var(--text);
             color: var(--text);
@@ -28,6 +33,18 @@
                 p {
                     color: var(--text);
                     font-size: 19px;
+                }
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        &.ant-modal-centered {
+            div.ant-modal {
+                vertical-align: bottom;
+                margin: 0;
+                max-width: 100%;
+                .ant-modal-content {
+                    border-radius: 0;
                 }
             }
         }

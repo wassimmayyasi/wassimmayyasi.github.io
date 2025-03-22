@@ -5,10 +5,19 @@
     font-weight: 400;
     line-height: 120%;
     position: relative;
+    max-width: 1200px;
+    padding: 0 36px;
     &.background {
         position: absolute;
         color: var(--text);
         width: 100%;
         top: calc(65px + 48px);
+    }
+    @media (max-width: 700px) {
+        padding: 0 24px;
+        font-size: 18px;
+        &.background {
+            top: calc(52px + 16px);
+        }
     }
 }

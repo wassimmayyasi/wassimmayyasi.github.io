@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 120px;
+    max-width: 1250px;
     .project {
         display: flex;
         align-items: center;
@@ -38,6 +39,7 @@
                     .skills {
                         display: flex;
                         gap: 8px;
+                        flex-wrap: wrap;
                         .skill {
                             display: flex;
                             padding: 10px;
@@ -58,6 +60,76 @@
                     font-size: 22px;
                     font-weight: 400;
                     line-height: 120%;
+                }
+            }
+            @media (max-width: 900px) {
+                flex-direction: column;
+                .text-details {
+                    .title-and-skills {
+                        .title {
+                            font-size: 24px;
+                        }
+                        .skills {
+                            gap: 6px;
+                            .skill {
+                                padding: 8px 9px;
+                                gap: 10px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .description {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 650px) {
+        gap: 48px;
+        .project {
+            &.text_first,
+            &.pic_first {
+                flex-direction: column;
+                gap: 32px;
+            }
+            img {
+                width: 60%;
+                height: auto;
+            }
+            .details {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 450px) {
+        gap: 36px;
+        .project {
+            &.text_first,
+            &.pic_first {
+                gap: 24px;
+            }
+            img {
+                width: 80%;
+                height: auto;
+            }
+            .details {
+                .text-details {
+                    .title-and-skills {
+                        .title {
+                            font-size: 21px;
+                        }
+                        .skills {
+                            gap: 5px;
+                            .skill {
+                                padding: 5px 6px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .description {
+                        font-size: 13px;
+                    }
                 }
             }
         }
