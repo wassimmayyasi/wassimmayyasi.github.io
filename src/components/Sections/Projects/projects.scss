@@ -8,15 +8,47 @@
         align-items: center;
         gap: 72px;
         padding: 0 36px;
+        .project-pic {
+            position: relative;
+            min-width: 40%;
+            max-width: 40%;
+            height: fit-content;
+            svg {
+                width: 100%;
+                height: fit-content;
+            }
+            .img-project-container {
+                width: 98%;
+                position: absolute;
+                top: 0;
+                right: -10px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 10px solid var(--primary);
+                img {
+                    width: 100%;
+                }
+                @media (max-width: 1150px) {
+                    border-width: 7px;
+                }
+            }
+        }
         &.pic_first {
             flex-direction: row;
+            .project-pic {
+                svg {
+                    transform: scaleX(-1);
+                }
+            }
         }
         &.text_first {
             flex-direction: row-reverse;
-        }
-        img {
-            width: 40%;
-            height: auto;
+            .project-pic {
+                .img-project-container {
+                    right: unset;
+                    left: -10px;
+                }
+            }
         }
         .details {
             display: flex;
@@ -93,9 +125,9 @@
                 flex-direction: column;
                 gap: 32px;
             }
-            img {
-                width: 60%;
-                height: auto;
+            .project-pic {
+                min-width: 60%;
+                max-width: 60%;
             }
             .details {
                 width: 100%;
@@ -109,8 +141,9 @@
             &.pic_first {
                 gap: 24px;
             }
-            img {
-                width: 80%;
+            .project-pic {
+                min-width: 80%;
+                max-width: 80%;
                 height: auto;
             }
             .details {

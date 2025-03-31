@@ -8,6 +8,7 @@
             --box-shadow: #{map-get($color-values, "box-shadow")};
             --path-start: #{map-get($color-values, "path-start")};
             --path-stop: #{map-get($color-values, "path-stop")};
+            --project-bg: #{map-get($color-values, "project-bg")};
         }
     }
 }

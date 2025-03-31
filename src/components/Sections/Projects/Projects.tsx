@@ -1,5 +1,6 @@
 import Section from "../../Section/Section";
 import { ProjectType, projects } from "./data/projects";
+import ProjectImg from "./ProjectImg";
 import "./projects.scss";
 
 const PICTURE_FIRST = "pic_first" as const;
@@ -16,7 +17,7 @@ function Project(props: ProjectProp) {
     const { project, position } = props;
     return (
         <div className={`project ${position}`}>
-            <img src={project.image} />
+            <ProjectImg pic={project.image} />
             <div className="details">
                 <div className="text-details">
                     <div className="title-and-skills">
