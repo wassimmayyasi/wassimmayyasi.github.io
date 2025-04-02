@@ -9,6 +9,7 @@
             --path-start: #{map-get($color-values, "path-start")};
             --path-stop: #{map-get($color-values, "path-stop")};
             --project-bg: #{map-get($color-values, "project-bg")};
+            --my-img-border-and-shadow: #{map-get($color-values, "my-img-border-and-shadow")};
         }
     }
 }

@@ -18,10 +18,10 @@
                 height: fit-content;
             }
             .img-project-container {
-                width: 98%;
+                width: 100%;
                 position: absolute;
-                top: 0;
-                right: -10px;
+                top: -4px;
+                right: -23px;
                 overflow: hidden;
                 border-radius: 50%;
                 border: 10px solid var(--primary);
@@ -46,7 +46,7 @@
             .project-pic {
                 .img-project-container {
                     right: unset;
-                    left: -10px;
+                    left: -23px;
                 }
             }
         }

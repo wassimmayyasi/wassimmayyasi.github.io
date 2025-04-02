@@ -36,7 +36,7 @@
         .job-title h2 {
             font-size: 42px;
         }
-        img {
+        .my-pic-container {
             width: 360px;
         }
     }
@@ -49,8 +49,9 @@
         .job-title h2 {
             font-size: 30px;
         }
-        img {
+        .my-pic-container {
             width: 230px;
+            border-width: 6px;
         }
     }
     @media (max-width: 630px) {
@@ -61,8 +62,22 @@
                 font-size: 24px;
             }
         }
-        img {
+        .my-pic-container {
             width: 130px;
+            border-width: 4px;
         }
+    }
+}
+
+.my-pic-container {
+    width: 360px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid var(--my-img-border-and-shadow);
+    background: linear-gradient(180deg, var(--path-start) 8.9%, var(--path-stop) 100%);
+    img {
+        height: 100%;
+        filter: drop-shadow(2px -10px 4px var(--my-img-border-and-shadow));
     }
 }
