@@ -19,5 +19,6 @@
         --background: #{get-theme-value($mode, "background")};
         --background-level-2: #{get-theme-value($mode, "background-level-2")};
         --text: #{get-theme-value($mode, "text")};
+        --subtitle: #{get-theme-value($mode, "subtitle")};
     }
 }

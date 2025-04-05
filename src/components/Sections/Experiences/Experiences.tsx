@@ -1,5 +1,5 @@
 import Section from "../../Section/Section";
-import ScrollPathAnimation from "./3-exp-path-desktop";
+import ScrollPathAnimation from "./newexp";
 import { my_experiences } from "./data";
 import "./experiences.scss";
 
