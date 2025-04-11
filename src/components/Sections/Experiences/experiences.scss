@@ -5,8 +5,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     gap: $spacing-8;
+    @media (max-width: 1180px) {
+        width: 100%;
+    }
+    &.mobile {
+        display: none;
+    }
     .the-end,
     .the-start {
         color: var(--secondary);
@@ -17,7 +24,7 @@
         text-align: center;
     }
     .exp-container {
-        @media (max-width: 730px) {
+        @media (max-width: 1180px) {
             width: 100%;
             padding: 0 12px;
         }
@@ -26,15 +33,99 @@
         overflow: visible;
         width: 1150px;
         @media (max-width: 1180px) {
-            width: 700px;
-        }
-        @media (max-width: 730px) {
             width: 100%;
         }
     }
     .exp-info {
         background: transparent;
-        padding: 20px;
+        padding: $spacing-5;
+        border-radius: $border-radius-xlarge;
+        box-shadow: var(--box-shadow);
+        gap: $spacing-1;
+        max-width: 420px;
+        top: var(--top);
+        left: var(--left);
+        .exp-details {
+            display: flex;
+            flex-direction: column;
+            p {
+                font-size: 15px;
+                @media (max-width: 865px) {
+                    font-size: 12px;
+                }
+            }
+
+            .exp-delay {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .title {
+                color: var(--subtitle);
+                font-weight: 600;
+            }
+            .company {
+                color: var(--primary);
+            }
+            .date {
+                color: var(--secondary);
+            }
+        }
+        ul.responsibilities {
+            list-style-position: inside;
+            li {
+                padding: $spacing-1 0;
+                font-size: 14px;
+                color: var(--text);
+                @media (max-width: 1180px) {
+                    font-size: 13px;
+                }
+                @media (max-width: 865px) {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        @media (max-width: 865px) {
+        }
+        @media (max-width: 1040px) {
+            &.exp-info-0 {
+                --left: 36% !important;
+            }
+            &.exp-info-1 {
+                --left: 14% !important;
+            }
+            &.exp-info-2 {
+                --left: 42% !important;
+            }
+        }
+        @media (max-width: 900px) {
+            &.exp-info-0 {
+                --top: 9% !important;
+                --left: 31% !important;
+            }
+            &.exp-info-1 {
+                --left: 19% !important;
+            }
+            &.exp-info-2 {
+                --top: 66% !important;
+                --left: 37% !important;
+            }
+        }
+        @media (max-width: 780px) {
+            &.exp-info-0 {
+                --left: 21% !important;
+            }
+            &.exp-info-2 {
+                --left: 27% !important;
+            }
+        }
+    }
+    .arrow-container {
+        height: 101px;
+    }
+    .exp-info.mobile {
+        padding: $spacing-5;
         border-radius: $border-radius-xlarge;
         box-shadow: var(--box-shadow);
         gap: $spacing-1;
@@ -42,19 +133,39 @@
         .exp-details {
             display: flex;
             flex-direction: column;
+            p {
+                font-size: 15px;
+            }
+
+            .exp-delay {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
             .title {
                 color: var(--subtitle);
-                font-size: 15px;
-                font-weight: 500;
+                font-weight: 600;
+            }
+            .company {
+                color: var(--primary);
+            }
+            .date {
+                color: var(--secondary);
             }
         }
         ul.responsibilities {
             list-style-position: inside;
             li {
                 padding: $spacing-1 0;
-                font-size: 17px;
+                font-size: 14px;
                 color: var(--text);
             }
+        }
+    }
+    @media (max-width: 645px) {
+        display: none;
+        &.mobile {
+            display: flex;
         }
     }
 }

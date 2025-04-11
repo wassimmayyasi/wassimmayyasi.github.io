@@ -5,7 +5,6 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-// Array of experiences
 const experiences = [
     {
         job_title: "Full-Stack Developer",
@@ -79,22 +78,18 @@ export default function ScrollPathAnimation() {
                         y: 0,
                     }
                 );
-            });
-
-            gsap.fromTo(
-                ".the-end",
-                { autoAlpha: 0 },
-                {
-                    autoAlpha: 1,
-                    duration: 0.4,
-                    ease: "power1.inOut",
+                gsap.from(`.exp-info-${index} .exp-delay`, {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 0.3,
+                    ease: "power2.out",
                     scrollTrigger: {
-                        trigger: `.the-end`,
+                        trigger: `.exp-info-${index} .exp-delay`,
                         start: `top center`,
                         toggleActions: "play none none reverse",
                     },
-                }
-            );
+                });
+            });
         }, containerRef);
 
         gsap.to(".the-start", {
@@ -103,6 +98,16 @@ export default function ScrollPathAnimation() {
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: `.the-start`,
+                start: `top center`,
+                toggleActions: "play none none reverse",
+            },
+        });
+        gsap.to(".the-end", {
+            opacity: 1,
+            duration: 0.4,
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: `.the-end`,
                 start: `top center`,
                 toggleActions: "play none none reverse",
             },
@@ -128,8 +133,6 @@ export default function ScrollPathAnimation() {
 
     return (
         <>
-            <div className="the-start">Aboutta graduate, some experiences end of 2020</div>
-
             <div
                 ref={containerRef}
                 className="exp-container"
@@ -166,9 +169,6 @@ export default function ScrollPathAnimation() {
                         strokeWidth="4px"
                     />
                     <circle className="ball ball01" r="11" fill="var(--secondary)" />
-                    <text className="the-end" x={0} y={"100%"}>
-                        The end, still with Scalers
-                    </text>
                 </svg>
                 {experiences.map((exp, index) => {
                     const topPositions = ["11%", "40%", "68%"];
@@ -177,14 +177,22 @@ export default function ScrollPathAnimation() {
                         <div
                             key={index}
                             className={`exp-info exp-info-${index}`}
-                            style={{
-                                marginBottom: "20px",
-                                position: "absolute",
-                                top: topPositions[index],
-                                left: leftPositions[index],
-                            }}
+                            style={
+                                {
+                                    marginBottom: "20px",
+                                    position: "absolute",
+                                    "--top": topPositions[index],
+                                    "--left": leftPositions[index],
+                                } as React.CSSProperties
+                            }
                         >
                             <div className="exp-details">
+                                <div className="exp-delay">
+                                    <p className="company ">At {exp.company_name}</p>
+                                    <p className="date exp-delay">
+                                        {exp.start_date} - {exp.end_date}
+                                    </p>
+                                </div>
                                 <p className="title">{exp.job_title}</p>
                             </div>
                             <ul className="responsibilities">
