@@ -1,6 +1,7 @@
 {
     "name": "wassim-mayyasi",
     "private": true,
+    "homepage": "https://wassimmayyasi.github.io/wassim-mayyasi/",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
