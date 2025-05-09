@@ -1,8 +1,8 @@
-import project1 from "../../../../assets/images/testing.png";
-import project2 from "../../../../assets/images/testing.png";
-import project3 from "../../../../assets/images/testing.png";
-import project4 from "../../../../assets/images/testing.png";
-import project5 from "../../../../assets/images/testing.png";
+import project1 from "../assets/images/testing.png";
+import project2 from "../assets/images/testing.png";
+import project3 from "../assets/images/testing.png";
+import project4 from "../assets/images/testing.png";
+import project5 from "../assets/images/testing.png";
 
 export interface ProjectType {
     title: string;

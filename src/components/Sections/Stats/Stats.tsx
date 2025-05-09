@@ -1,5 +1,6 @@
 import CountUp from "react-countup";
 import "./stats.scss";
+import content from "../../../content/content";
 interface StatProps {
     title: string;
     stat: number;
@@ -23,9 +24,9 @@ export default function Stats() {
     return (
         <div className="stats-bg">
             <div className="stats">
-                <Stat stat={2} title="Years of Experience" />
-                <Stat stat={10} title="Project Completed" />
-                <Stat stat={150} title="Code Reviews" />
+                <Stat stat={content.stats.stat1.number} title={content.stats.stat1.stat_title} />
+                <Stat stat={content.stats.stat2.number} title={content.stats.stat2.stat_title} />
+                <Stat stat={content.stats.stat3.number} title={content.stats.stat3.stat_title} />
             </div>
         </div>
     );

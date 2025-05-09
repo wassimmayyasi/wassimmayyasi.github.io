@@ -5,6 +5,7 @@ import "./Header.scss";
 import { useEffect, useState } from "react";
 import { navItems } from "../../utils";
 import ThemesAndExternalLinks from "../ThemesAndExternalLinks/ThemesAndExternalLinks";
+import content from "../../content/content";
 
 const { Header } = Layout;
 
@@ -33,7 +34,7 @@ export default function MyHeader() {
                 className="logo"
                 onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
             >
-                <h2>Wassim Mayyasi</h2>
+                <h2>{content.header_footer.name}</h2>
             </div>
 
             {/* Desktop Navigation */}

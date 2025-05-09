@@ -1,5 +1,5 @@
+import { projects, ProjectType } from "../../../content/projects";
 import Section from "../../Section/Section";
-import { ProjectType, projects } from "./data/projects";
 import ProjectImg from "./ProjectImg";
 import "./projects.scss";
 

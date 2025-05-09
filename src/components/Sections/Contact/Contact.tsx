@@ -1,26 +1,10 @@
-import { EnvironmentFilled, MailFilled, PhoneFilled } from "@ant-design/icons";
 import Section from "../../Section/Section";
 import ContactMePic from "../../../assets/images/contact-me.svg?react";
 import "./contact.scss";
 import ContactForm from "./ContactForm";
+import { contactInfo } from "../../../content/contact";
 
 export default function Contact() {
-    const contactInfo = [
-        {
-            name: "Phone number",
-            icon: <PhoneFilled />,
-            info: "0550605856",
-        },
-        {
-            name: "Email",
-            icon: <MailFilled />,
-            info: "wassim.mayyasi@gmail.com",
-        },
-        {
-            icon: <EnvironmentFilled />,
-            info: "Saudi Arabia - Riyadh",
-        },
-    ];
     return (
         <Section title="Contact Me">
             <div className="contact-me">

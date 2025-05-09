@@ -2,35 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { experiences } from "../../../content/experiences";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
-const experiences = [
-    {
-        job_title: "Full-Stack Developer",
-        company_name: "Scalers",
-        start_date: "08/2022",
-        end_date: "present",
-        description:
-            "Experience details for Scalers. Company C. ahsdajhd ajhsdjah dkjashd jkashdkjsah djkahsd kajhdak jhdkjashd skajhdksaj",
-    },
-    {
-        job_title: "Software Engineer",
-        company_name: "Company B",
-        start_date: "01/2021",
-        end_date: "07/2022",
-        description:
-            "Experience details for Company B.Company C. ahsdajhd ajhsdjah dkjashd jkashdkjsah djkahsd kajhdak jhdkjashd skajhdksaj",
-    },
-    {
-        job_title: "Frontend Developer",
-        company_name: "Company C",
-        start_date: "05/2019",
-        end_date: "12/2020",
-        description:
-            "Experience details for Company C. ahsdajhd ajhsdjah dkjashd jkashdkjsah djkahsd kajhdak jhdkjashd skajhdksaj ",
-    },
-];
 
 export default function ScrollPathAnimation() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -196,18 +170,9 @@ export default function ScrollPathAnimation() {
                                 <p className="title">{exp.job_title}</p>
                             </div>
                             <ul className="responsibilities">
-                                <li>
-                                    hehe hehe hehe hehe hehe hehe hehe hehe ahsjdhsajlk dahdhaskihdkjsa kjdsah
-                                    askljdhnaskjdhsa kjhaskdjh askjdhsajkd shakj
-                                </li>
-                                <li>
-                                    hoho hehe ahsjdhsajlk dahdhaskihdkjsa kjdsah askljdhnaskjdhsa kjhaskdjh askjdhsajkd
-                                    shakj
-                                </li>
-                                <li>
-                                    hihi hehe ahsjdhsajlk dahdhaskihdkjsa kjdsah askljdhnaskjdhsa kjhaskdjh askjdhsajkd
-                                    shakj
-                                </li>
+                                {exp.responsibilities.map((resp) => (
+                                    <li>{resp}</li>
+                                ))}
                             </ul>
                         </div>
                     );

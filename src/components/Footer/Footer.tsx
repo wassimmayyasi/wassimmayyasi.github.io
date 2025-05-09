@@ -4,6 +4,7 @@ import { navItems } from "../../utils";
 import "./footer.scss";
 import LineWithDots from "../LineWithDots/LineWithDots";
 import ThemesAndExternalLinks from "../ThemesAndExternalLinks/ThemesAndExternalLinks";
+import content from "../../content/content";
 
 const { Footer } = Layout;
 
@@ -20,7 +21,7 @@ export default function MyFooter() {
         <Footer className="footer">
             <h1 className="title">
                 <PandaIcon />
-                Wassim Mayyasi
+                {content.header_footer.name}
             </h1>
             <div className="nav-and-extra">
                 <div className="nav">
@@ -36,10 +37,16 @@ export default function MyFooter() {
                 <LineWithDots />
                 <div className="people">
                     <div>
-                        <p>Developed by:</p> <a href="">Wassim Mayyasi</a>
+                        <p>Developed by:</p>{" "}
+                        <a target="_blank" href="https://www.linkedin.com/in/wassim-mayyasi/">
+                            Wassim Mayyasi
+                        </a>
                     </div>
                     <div>
-                        <p>Designed by:</p> <a href="">Bassel Al Droubi</a>
+                        <p>Designed by:</p>{" "}
+                        <a target="_blank" href="https://www.linkedin.com/in/bassel-aldroubi-aa064413a/">
+                            Bassel Al Droubi
+                        </a>
                     </div>
                 </div>
             </div>
