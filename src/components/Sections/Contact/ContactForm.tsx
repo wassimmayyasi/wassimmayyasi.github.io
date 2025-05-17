@@ -5,6 +5,7 @@ import { StoreValue } from "rc-field-form/lib/interface";
 import "./contact-form.scss";
 import { SendOutlined } from "@ant-design/icons";
 import content from "../../../content/content";
+import { isValidPhoneNumber } from "libphonenumber-js";
 
 interface ContactFormValues {
     email: string;
@@ -84,21 +85,24 @@ const ContactForm: React.FC = () => {
                 label={<span className="label">Phone</span>}
                 name="phone"
                 rules={[
+                    { required: true, message: "Please enter your phone." },
                     {
                         validator: (_: RuleObject, value: StoreValue) => {
-                            if (!value) {
-                                return Promise.resolve();
-                            }
-                            const regex = /^\+(?:[0-9] ?){7,15}[0-9]$/;
-                            if (regex.test(value)) {
-                                return Promise.resolve();
-                            }
-                            return Promise.reject(new Error("Please enter a valid international phone number"));
+                            if (!value) return Promise.resolve();
+
+                            // Full international format validation
+                            const isValid = isValidPhoneNumber(value);
+
+                            if (isValid) return Promise.resolve();
+
+                            return Promise.reject(
+                                new Error("Please enter a valid international phone number (e.g., +966512345678)")
+                            );
                         },
                     },
                 ]}
             >
-                <Input placeholder="e.g., +9664567890" />
+                <Input placeholder="e.g., +966512345678" />
             </Form.Item>
 
             <Form.Item
