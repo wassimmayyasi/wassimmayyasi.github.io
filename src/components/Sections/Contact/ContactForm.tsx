@@ -1,9 +1,10 @@
 import React from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import { RuleObject } from "antd/lib/form";
 import { StoreValue } from "rc-field-form/lib/interface";
 import "./contact-form.scss";
 import { SendOutlined } from "@ant-design/icons";
+import content from "../../../content/content";
 
 interface ContactFormValues {
     email: string;
@@ -14,8 +15,41 @@ interface ContactFormValues {
 const ContactForm: React.FC = () => {
     const [form] = Form.useForm<ContactFormValues>();
 
-    const onFinish = (values: ContactFormValues) => {
-        console.log("Form submitted with:", values);
+    const onFinish = async (values: ContactFormValues) => {
+        let errorOccur = notification.error({
+            message: "Submission failed",
+            description: "An unexpected error occurred. Please try again later. Or contact me directly by email",
+            placement: "topRight",
+            duration: 5,
+        });
+        try {
+            const response = await fetch(`https://formspree.io/f/${content.contact_me_token}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    email: values.email,
+                    phone: values.phone,
+                    message: values.message,
+                }),
+            });
+
+            if (response.ok) {
+                form.resetFields();
+                notification.success({
+                    message: "Message sent successfully!",
+                    description: "Thank you for reaching out. I'll get back to you as soon as possible.",
+                    placement: "topRight",
+                    duration: 5,
+                });
+            } else {
+                errorOccur;
+            }
+        } catch (error) {
+            errorOccur;
+        }
     };
 
     const onFinishFailed = (errorInfo: any) => {

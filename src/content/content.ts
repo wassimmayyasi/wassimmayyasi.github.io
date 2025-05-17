@@ -30,6 +30,7 @@ const content = {
         beginning_content: "Start content",
         end_content: "End content",
     },
+    contact_me_token: "mldbzjvw",
 };
 
 export default content;

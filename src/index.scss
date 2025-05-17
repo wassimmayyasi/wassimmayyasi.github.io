@@ -49,3 +49,16 @@
         align-self: center;
     }
 }
+.ant-notification-notice {
+    .ant-notification-notice-content {
+        .ant-notification-notice-with-icon {
+            .ant-notification-notice-message {
+                line-height: 1.1;
+                margin-inline-start: 28px;
+            }
+            .ant-notification-notice-description {
+                margin-inline-start: 28px;
+            }
+        }
+    }
+}
