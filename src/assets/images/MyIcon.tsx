@@ -1,7 +1,7 @@
 import Icon from "@ant-design/icons";
 import { CustomIconComponentProps } from "@ant-design/icons/lib/components/Icon";
 
-const PandaSvg = () => (
+const MySVG = () => (
     <svg
         width="800px"
         height="800px"
@@ -53,6 +53,6 @@ const PandaSvg = () => (
         ></path>
     </svg>
 );
-export default function PandaIcon(props: Partial<CustomIconComponentProps>) {
-    return <Icon component={PandaSvg} {...props} />;
+export default function MyIcon(props: Partial<CustomIconComponentProps>) {
+    return <Icon component={MySVG} {...props} />;
 }

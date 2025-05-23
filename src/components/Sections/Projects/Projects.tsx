@@ -1,7 +1,9 @@
+import { Button } from "antd";
 import { projects, ProjectType } from "../../../content/projects";
 import Section from "../../Section/Section";
 import ProjectImg from "./ProjectImg";
 import "./projects.scss";
+import { EyeOutlined } from "@ant-design/icons";
 
 const PICTURE_FIRST = "pic_first" as const;
 const TEXT_FIRST = "text_first" as const;
@@ -32,7 +34,19 @@ function Project(props: ProjectProp) {
                     </div>
                     <p className="description">{project.description}</p>
                 </div>
-                <div className="external-links">{/* {project.githubLink ? } */}</div>
+                <div className="external-links">
+                    {project.previewLink && (
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            icon={<EyeOutlined />}
+                            iconPosition="start"
+                            onClick={() => window.open(project.previewLink, "_blank")}
+                        >
+                            Preview
+                        </Button>
+                    )}
+                </div>
             </div>
         </div>
     );

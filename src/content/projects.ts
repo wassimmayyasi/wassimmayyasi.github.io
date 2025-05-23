@@ -8,7 +8,6 @@ export interface ProjectType {
     title: string;
     skills: string[];
     description: string;
-    githubLink?: string;
     previewLink?: string;
     image: string;
 }
@@ -26,7 +25,6 @@ export const projects: ProjectType[] = [
         skills: ["Bash", "C"],
         description:
             "A Unix shell, comparable to sh, bash, or zsh, was developed using the C programming language. Aside from the necessities (exit, chdir, cd, etc.), a few more functionality were implemented.",
-        githubLink: "https://github.com/wassimmayyasi/ShellImplementation",
         image: project2,
     },
     {
@@ -34,7 +32,6 @@ export const projects: ProjectType[] = [
         skills: ["Java", "UML Diagrams", "Design Patterns"],
         description:
             "A code snippet desktop application was created for the 'Software Design' course using the Java programming language. It was created using various design patterns and adhered to conventional software agile development, including the creation of UML diagrams, implementation, and testing. This simple software contains features for adding, removing, modifying, favoriting, and more.",
-        githubLink: "https://github.com/wassimmayyasi/CodeSnippetsApplication",
         image: project3,
     },
     {

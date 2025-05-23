@@ -12,7 +12,7 @@ form.ant-form {
         }
         .required-star,
         .ant-form-item-explain-error {
-            color: $danger-400;
+            color: var(--error);
         }
         .ant-form-item-control-input-content {
             .ant-input-affix-wrapper,

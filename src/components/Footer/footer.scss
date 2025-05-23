@@ -16,7 +16,7 @@ footer.footer {
         align-self: center;
         gap: $spacing-4;
         line-height: 46px;
-        color: $white-50;
+        color: $white;
         svg {
             width: 32px;
             height: auto;
@@ -36,7 +36,7 @@ footer.footer {
             gap: 32px;
             a {
                 text-decoration: none;
-                color: $white-50;
+                color: $white;
                 font-size: 20px;
                 line-height: 30px;
                 &:hover {
@@ -64,7 +64,7 @@ footer.footer {
                 p,
                 a {
                     font-size: 18px;
-                    color: $white-50;
+                    color: $white;
                 }
             }
             @media (max-width: 650px) {

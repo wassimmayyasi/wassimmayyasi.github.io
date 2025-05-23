@@ -1,3 +1,5 @@
+@import "/design-system/allStyles.scss";
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -52,6 +54,7 @@
         }
         .details {
             display: flex;
+            flex-direction: column;
             gap: 16px;
             cursor: default;
             .text-details {
@@ -94,6 +97,19 @@
                     line-height: 120%;
                 }
             }
+            .ant-btn {
+                color: var(--primary);
+                background-color: transparent;
+                border: 1px var(--primary) solid;
+                border-radius: $border-radius-xlarge;
+                font-size: 16px;
+                font-weight: 600;
+                padding: $spacing-2 $spacing-4;
+                height: fit-content;
+                width: fit-content;
+                margin-top: $spacing-2;
+            }
+
             @media (max-width: 900px) {
                 flex-direction: column;
                 .text-details {

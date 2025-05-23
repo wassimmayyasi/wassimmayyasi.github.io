@@ -1,5 +1,4 @@
 import { Layout } from "antd";
-import PandaIcon from "../../assets/images/PandaIcon";
 import { navItems } from "../../utils";
 import "./footer.scss";
 import LineWithDots from "../LineWithDots/LineWithDots";
@@ -20,7 +19,7 @@ export default function MyFooter() {
     return (
         <Footer className="footer">
             <h1 className="title">
-                <PandaIcon />
+                {content.header_footer.icon}
                 {content.header_footer.name}
             </h1>
             <div className="nav-and-extra">

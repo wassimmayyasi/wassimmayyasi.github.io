@@ -4,6 +4,7 @@ import { MdOutlineBrush } from "react-icons/md";
 import ThemeModal from "../ThemeModal/ThemeModal";
 import { useState } from "react";
 import "./themesandexternallinks.scss";
+import content from "../../content/content";
 
 interface Props {
     className?: string;
@@ -26,8 +27,20 @@ export default function ThemesAndExternalLinks(props: Props) {
         <>
             <div className={`extra-details ${className && className}`}>
                 <div className="external">
-                    <Button type="primary" shape="circle" icon={<FaGithub />} />
-                    <Button type="primary" shape="circle" icon={<FaLinkedinIn />} />
+                    {content.header_footer.github_link && (
+                        <Button
+                            type="primary"
+                            shape="circle"
+                            icon={<FaGithub />}
+                            onClick={() => window.open(content.header_footer.github_link, "_blank")}
+                        />
+                    )}
+                    <Button
+                        type="primary"
+                        shape="circle"
+                        icon={<FaLinkedinIn />}
+                        onClick={() => window.open(content.header_footer.linkedin_link, "_blank")}
+                    />
                 </div>
                 <Button type="primary" shape="circle" icon={<MdOutlineBrush className="brush" />} onClick={showModal} />
             </div>

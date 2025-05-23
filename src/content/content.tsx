@@ -1,8 +1,13 @@
+import MyIcon from "../assets/images/MyIcon";
+import ThemeSvg from "../assets/images/theme-icon.svg?react";
+
 const content = {
     header_footer: {
         name: "Wassim Mayyasi",
         github_link: "https://github.com/wassimmayyasi",
         linkedin_link: "https://www.linkedin.com/in/wassim-mayyasi/",
+        icon: <MyIcon />,
+        theme_icon: <ThemeSvg />,
     },
     top_banner: {
         first_name: "Wassim",

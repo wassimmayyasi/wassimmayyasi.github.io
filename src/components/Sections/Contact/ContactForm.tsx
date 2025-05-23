@@ -16,13 +16,16 @@ interface ContactFormValues {
 const ContactForm: React.FC = () => {
     const [form] = Form.useForm<ContactFormValues>();
 
-    const onFinish = async (values: ContactFormValues) => {
-        let errorOccur = notification.error({
+    const showErrorNotification = () => {
+        notification.error({
             message: "Submission failed",
             description: "An unexpected error occurred. Please try again later. Or contact me directly by email",
             placement: "topRight",
             duration: 5,
         });
+    };
+
+    const onFinish = async (values: ContactFormValues) => {
         try {
             const response = await fetch(`https://formspree.io/f/${content.contact_me_token}`, {
                 method: "POST",
@@ -36,7 +39,6 @@ const ContactForm: React.FC = () => {
                     message: values.message,
                 }),
             });
-
             if (response.ok) {
                 form.resetFields();
                 notification.success({
@@ -46,15 +48,11 @@ const ContactForm: React.FC = () => {
                     duration: 5,
                 });
             } else {
-                errorOccur;
+                showErrorNotification();
             }
         } catch (error) {
-            errorOccur;
+            showErrorNotification();
         }
-    };
-
-    const onFinishFailed = (errorInfo: any) => {
-        console.log("Validation Failed:", errorInfo);
     };
 
     return (
@@ -63,7 +61,6 @@ const ContactForm: React.FC = () => {
             name="contactForm"
             layout="vertical"
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
             requiredMark={false}
         >
             <Form.Item
