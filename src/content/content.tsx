@@ -4,6 +4,7 @@ import ThemeSvg from "../assets/images/theme-icon.svg?react";
 const content = {
     header_footer: {
         name: "",
+        // If you keep the following empty, it will not show in footer and header
         github_link: "",
         linkedin_link: "",
         icon: <MyIcon />,
@@ -15,6 +16,8 @@ const content = {
         job_title: "",
     },
     stats: {
+        // You can change the following accordingly, but make sure not to change
+        // the names of the fields, only change content (after the colon ':')
         stat1: {
             number: 3,
             stat_title: "Years of Experience",

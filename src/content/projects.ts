@@ -8,13 +8,14 @@ export interface ProjectType {
     previewLink?: string;
     image: string;
 }
-
+// Just uncomment the block, and copy paste it to add more
+// You can add as many as you'd like.
 export const projects: ProjectType[] = [
     // {
     //     title: "",
     //     skills: ["", "", "", "", ""],
     //     description: "",
     //     previewLink: "",
-    //     image: "",
+    //     image: project1,
     // },
 ];
