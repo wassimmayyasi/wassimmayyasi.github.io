@@ -3,16 +3,16 @@ import ThemeSvg from "../assets/images/theme-icon.svg?react";
 
 const content = {
     header_footer: {
-        name: "Wassim Mayyasi",
-        github_link: "https://github.com/wassimmayyasi",
-        linkedin_link: "https://www.linkedin.com/in/wassim-mayyasi/",
+        name: "",
+        github_link: "",
+        linkedin_link: "",
         icon: <MyIcon />,
         theme_icon: <ThemeSvg />,
     },
     top_banner: {
-        first_name: "Wassim",
-        last_name: "Mayyasi",
-        job_title: "Senior Software Engineer",
+        first_name: "",
+        last_name: "",
+        job_title: "",
     },
     stats: {
         stat1: {
@@ -29,13 +29,13 @@ const content = {
         },
     },
     about_me: {
-        text: "Hello, my name is Wassim. Welcome to my website portfolio. Let me tell you a little bit about myself. I am currently a full-stack developer at Scalers. I built both the frontend and backend of the company's hiring platform from the ground up. I'm always interested in learning about new frameworks, languages, and tools that are thriving in the tech market. I am the type of person who constantly puts himself in difficult situations in order to learn something new.",
+        text: "",
     },
     experiences: {
-        beginning_content: "Start content",
-        end_content: "End content",
+        beginning_content: "",
+        end_content: "",
     },
-    contact_me_token: "mldbzjvw",
+    contact_me_token: "",
 };
 
 export default content;
