@@ -4,15 +4,15 @@ export const contactInfo = [
     {
         name: "Phone number",
         icon: <PhoneFilled />,
-        info: "",
+        info: "0550605856",
     },
     {
         name: "Email",
         icon: <MailFilled />,
-        info: "",
+        info: "wassim.mayyasi@gmail.com",
     },
     {
         icon: <EnvironmentFilled />,
-        info: "",
+        info: "Saudi Arabia - Riyadh",
     },
 ];
