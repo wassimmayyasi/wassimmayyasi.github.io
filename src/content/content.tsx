@@ -32,7 +32,7 @@ const content = {
         },
     },
     about_me: {
-        text: "I'm a full-stack engineer with experience building scalable web applications using Django, React, and AWS. At Scalers, I've worked across product, infrastructure, and data, leading projects involving microservices, event-driven systems, and integrations with tools like Auth0, Metabase, and Slack. I enjoy working at the intersection of product and engineering, especially where technical decisions directly improve user experience. Alongside backend architecture and cloud deployments, I'm passionate about internal tools, data pipelines, and creating systems that help teams move faster. I care about mentorship, clear documentation, and building with curiosity and care.",
+        text: "I'm a full-stack engineer with experience building scalable web applications using Django, React, and AWS. At Scalers, I've worked across product, infrastructure, and data, leading projects involving microservices, event-driven systems, and integrations with tools like Auth0, Metabase, and Slack. I enjoy working at the intersection of product and engineering, especially where technical decisions directly improve user experience. Alongside backend architecture and cloud deployments, I'm passionate about internal tools, data pipelines, and creating systems that help teams move faster. I care about mentorship, clear documentation, and building with curiosity and care.\n\nOutside of this field, I enjoy running, painting, playing video games, and traveling. :3",
     },
     experiences: {
         beginning_content: "Where It Began",
