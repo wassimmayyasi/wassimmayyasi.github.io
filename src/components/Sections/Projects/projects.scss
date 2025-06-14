@@ -21,6 +21,9 @@
             }
             .img-project-container {
                 width: 100%;
+                max-height: 100%;
+                display: flex;
+                align-items: center;
                 position: absolute;
                 top: -4px;
                 right: -23px;
