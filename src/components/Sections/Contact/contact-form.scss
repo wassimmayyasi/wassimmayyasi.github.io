@@ -63,6 +63,10 @@ form.ant-form {
                 height: fit-content;
                 width: fit-content;
                 margin-top: $spacing-2;
+                &:hover {
+                    background-color: var(--primary);
+                    color: var(--background-level-2);
+                }
             }
         }
     }
