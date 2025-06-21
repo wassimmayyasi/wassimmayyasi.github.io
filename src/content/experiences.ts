@@ -37,10 +37,13 @@ export const experiences: Experiences[] = [
         start_date: "08/2022",
         end_date: "present",
         responsibilities: [
-            "Developed a scalable hiring platform with a React.js frontend and a Django/PostgreSQL backend.",
-            "Managed AWS infrastructure with CI/CD via GitHub Actions.",
-            "Built microservices using FastAPI for a modular architecture.",
-            "Introduced serverless architecture with a FastAPI-based LLM on AWS Lambda for scalable AI workloads. and more stuff ;3",
+            "Built and launched the company’s core hiring platform from scratch as the first engineering hire, using React with TypeScript (frontend) and Django (backend), delivering the MVP to production in under 3 months.",
+            "Migrated frontend codebase to TypeScript, improving code reliability, maintainability, and developer productivity.",
+            "Designed and implemented RESTful APIs and responsive user interfaces, integrating with external systems to support features like interview scheduling and OTP verification.",
+            "Set up and managed cloud infrastructure on AWS, handling deployments, monitoring, and ensuring production stability.",
+            "Helped establish agile workflows (sprints, planning, retrospectives), contributing to a more structured and predictable development process.",
+            "Promoted to Engineering Lead, supporting the growth of the engineering team by mentoring new hires, conducting interviews, and guiding project execution.",
+            "Maintained individual contributor responsibilities while balancing leadership duties, consistently delivering key platform features and improvements.",
         ],
     },
 ];
