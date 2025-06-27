@@ -130,6 +130,7 @@
         box-shadow: var(--box-shadow);
         gap: $spacing-1;
         max-width: 420px;
+        margin: 0 12px;
         .exp-details {
             display: flex;
             flex-direction: column;

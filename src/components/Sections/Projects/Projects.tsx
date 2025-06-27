@@ -4,6 +4,7 @@ import Section from "../../Section/Section";
 import ProjectImg from "./ProjectImg";
 import "./projects.scss";
 import { EyeOutlined } from "@ant-design/icons";
+import FadeInSection from "../../FadeInSection/FadeInSection";
 
 const PICTURE_FIRST = "pic_first" as const;
 const TEXT_FIRST = "text_first" as const;
@@ -58,7 +59,13 @@ export default function Projects() {
             <div className="projects">
                 {projects.map(
                     (project, index): JSX.Element => (
-                        <Project key={index} project={project} position={index % 2 != 0 ? TEXT_FIRST : PICTURE_FIRST} />
+                        <FadeInSection>
+                            <Project
+                                key={index}
+                                project={project}
+                                position={index % 2 != 0 ? TEXT_FIRST : PICTURE_FIRST}
+                            />
+                        </FadeInSection>
                     )
                 )}
             </div>
