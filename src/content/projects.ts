@@ -1,5 +1,6 @@
 // import project images here, sample import:
 import udacity from "../assets/images/udacity.png";
+import udacity_data_eng from "../assets/images/udacity-data-eng.png";
 import scalers from "../assets/images/scalers.png";
 import matching from "../assets/images/matching.png";
 import bachelor from "../assets/images/bachelor.png";
@@ -31,6 +32,14 @@ export const projects: ProjectType[] = [
             "Udacity's Cloud Developer Nanodegree is a hands-on program focused on building and deploying applications in the cloud. The course covers everything from developing RESTful APIs with Node.js and Express to containerizing applications with Docker and managing them with Kubernetes. One of the key parts of the course is learning how to deploy full-stack applications on AWS using services like Elastic Beanstalk and S3. Along the way, it introduces concepts like CI/CD pipelines, securing applications, and applying best practices for cloud-native development. The whole program is project-based, so every concept is applied in real-world scenarios.",
         previewLink: "https://www.udacity.com/certificate/e/4ff227ce-51df-11ef-a614-3ffa1749aba5",
         image: udacity,
+    },
+    {
+        title: "[Udacity] Data Engineering with AWS",
+        skills: ["Cassandra", "ETL", "ELT", "Redshift", "Apache Spark", "AWS Glue", "Apache Airflow", "Data Pipelines"],
+        description:
+            "Completed a comprehensive program focused on building scalable, cloud-based data infrastructure using AWS. Gained hands-on experience in designing relational and NoSQL data models, building ETL pipelines with PostgreSQL and Apache Cassandra, and leveraging Apache Spark for big data processing and data lake management. Developed production-grade data workflows using Apache Airflow, integrating AWS tools like S3 and Redshift to automate, monitor, and maintain complex data pipelines. This course strengthened my understanding of cloud data engineering, workflow orchestration, and scalable data architecture.",
+        previewLink: "https://www.udacity.com/certificate/e/be0adf44-98ed-11ef-9f59-67a0409430be",
+        image: udacity_data_eng,
     },
     {
         title: "Matching Reasons & Interview Questions Generator",
