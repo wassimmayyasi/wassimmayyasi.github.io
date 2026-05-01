@@ -37,14 +37,25 @@
         }
     }
     .exp-info {
-        background: var(--background);
+        // Slightly transparent card background (with a safe fallback).
+        background: rgba(0, 0, 0, 0.15);
+        @supports (background: color-mix(in srgb, black, white)) {
+            background: color-mix(in srgb, var(--background) 95%, transparent);
+        }
         padding: $spacing-5;
         border-radius: $border-radius-xlarge;
         box-shadow: var(--box-shadow);
         gap: $spacing-1;
+        width: 100%;
         max-width: 420px;
         top: var(--top);
         left: var(--left);
+        &:not(.mobile)[data-side="right"] {
+            transform: translateX(16px);
+        }
+        &:not(.mobile)[data-side="left"] {
+            transform: translateX(calc(-100% - 16px));
+        }
         .exp-details {
             display: flex;
             flex-direction: column;
@@ -88,38 +99,8 @@
 
         @media (max-width: 865px) {
         }
-        @media (max-width: 1040px) {
-            &.exp-info-0 {
-                --left: 36% !important;
-            }
-            &.exp-info-1 {
-                --left: 14% !important;
-            }
-            &.exp-info-2 {
-                --left: 42% !important;
-            }
-        }
-        @media (max-width: 900px) {
-            &.exp-info-0 {
-                --top: 9% !important;
-                --left: 31% !important;
-            }
-            &.exp-info-1 {
-                --left: 19% !important;
-            }
-            &.exp-info-2 {
-                --top: 66% !important;
-                --left: 37% !important;
-            }
-        }
-        @media (max-width: 780px) {
-            &.exp-info-0 {
-                --left: 21% !important;
-            }
-            &.exp-info-2 {
-                --left: 27% !important;
-            }
-        }
+        // NOTE: `--top/--left` are computed dynamically in `newexp.tsx` based on the SVG path.
+        // Keeping this un-harded so the layout works for any number of experiences.
     }
     .arrow-container {
         height: 101px;

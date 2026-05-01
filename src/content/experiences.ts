@@ -5,8 +5,8 @@ interface Experiences {
     end_date: string;
     responsibilities: string[];
 }
-// Just copy paste the entire block if you need to add experiences
-// The design supports exactly 3 experiences, so please add exactly 3
+// Just copy paste the entire block if you need to add experiences.
+// The Experiences timeline can render any number of items.
 export const experiences: Experiences[] = [
     {
         job_title: "Student Assistant (Requirement Engineering)",
@@ -35,7 +35,7 @@ export const experiences: Experiences[] = [
         job_title: "Senior Software Engineer",
         company_name: "Scalers",
         start_date: "08/2022",
-        end_date: "present",
+        end_date: "08/2025",
         responsibilities: [
             "Built and launched the company’s core hiring platform from scratch as the first engineering hire, using React with TypeScript (frontend) and Django (backend), delivering the MVP to production in under 3 months.",
             "Migrated frontend codebase to TypeScript, improving code reliability, maintainability, and developer productivity.",
@@ -44,6 +44,17 @@ export const experiences: Experiences[] = [
             "Helped establish agile workflows (sprints, planning, retrospectives), contributing to a more structured and predictable development process.",
             "Promoted to Engineering Lead, supporting the growth of the engineering team by mentoring new hires, conducting interviews, and guiding project execution.",
             "Maintained individual contributor responsibilities while balancing leadership duties, consistently delivering key platform features and improvements.",
+        ],
+    },
+    {
+        job_title: "Senior Software Engineer",
+        company_name: "Malaa Tech",
+        start_date: "08/2025",
+        end_date: "present",
+        responsibilities: [
+            "Built and launched the company’s core hiring platform from scratch as the first engineering hire, using React with TypeScript (frontend) and Django (backend), delivering the MVP to production in under 3 months.",
+            "Migrated frontend codebase to TypeScript, improving code reliability, maintainability, and developer productivity.",
+            "Designed and implemented RESTful APIs and responsive user interfaces, integrating with external systems to support features like interview scheduling and OTP verification.",
         ],
     },
 ];
