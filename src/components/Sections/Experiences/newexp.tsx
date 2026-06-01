@@ -10,6 +10,8 @@ export default function ScrollPathAnimation() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const displayedExperiences = experiences.slice(0, 4);
+
         const ctx = gsap.context(() => {
             gsap.defaults({ ease: "none" });
             gsap.set(".ball.ball01", { x: 300, y: 0 });
@@ -36,7 +38,7 @@ export default function ScrollPathAnimation() {
                 .to(".theLine", { strokeDashoffset: 0 }, 0)
                 .to(".ball01", { motionPath: { path: ".theLine", alignOrigin: [0.5, 0.5] } }, 0);
 
-            experiences.forEach((_, index) => {
+            displayedExperiences.forEach((_, index) => {
                 gsap.fromTo(
                     `.exp-info-${index}`,
                     { autoAlpha: 0, y: 20 },
@@ -117,14 +119,14 @@ export default function ScrollPathAnimation() {
                     flexDirection: "column",
                 }}
             >
-                <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 2000">
+                <svg id="svg" xmlns="http://www.w3.org/2450/svg" viewBox="0 0 600 2450">
                     <defs>
                         <linearGradient
                             id="strokeGradient"
                             x1="180"
                             y1="0"
                             x2="600"
-                            y2="2000"
+                            y2="2450"
                             gradientUnits="userSpaceOnUse"
                         >
                             <stop offset="0" stopColor="var(--path-start)" />
@@ -134,19 +136,21 @@ export default function ScrollPathAnimation() {
                     <path
                         className="theLine"
                         d={`M 300,0
-                            Q 800 250 300 550
-                            T 200 1100
-                            Q 800 1350 500 1550
-                            T 180 2000`}
+                            Q 820 300 300 600
+                            T 300 1200
+                            T 300 1800
+                            T 300 2250
+                            Q 450 2278 440 2450`
+                        }
                         fill="none"
                         stroke="url(#strokeGradient)"
                         strokeWidth="4px"
                     />
                     <circle className="ball ball01" r="11" fill="var(--secondary)" />
                 </svg>
-                {experiences.map((exp, index) => {
-                    const topPositions = ["11%", "40%", "68%"];
-                    const leftPositions = ["42%", "10%", "51%"];
+                {experiences.slice(0, 4).map((exp, index) => {
+                    const topPositions = ["10%", "34%", "58%", "82%"];
+                    const leftPositions = ["42%", "10%", "51%", "18%"];
                     return (
                         <div
                             key={index}
@@ -171,7 +175,7 @@ export default function ScrollPathAnimation() {
                             </div>
                             <ul className="responsibilities">
                                 {exp.responsibilities.map((resp) => (
-                                    <li>{resp}</li>
+                                    <li key={resp}>{resp}</li>
                                 ))}
                             </ul>
                         </div>
