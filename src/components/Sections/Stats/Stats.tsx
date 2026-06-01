@@ -4,6 +4,7 @@ import content from "../../../content/content";
 interface StatProps {
     title: string;
     stat: number;
+    symbol?: string;
 }
 
 function Stat(props: StatProps) {
@@ -12,7 +13,7 @@ function Stat(props: StatProps) {
             <div className="stat">
                 <span className="number">
                     <CountUp end={props.stat} duration={5} />
-                    <p>+</p>
+                    <p>{props.symbol || "+"}</p>
                 </span>
                 <p className="title">{props.title}</p>
             </div>
@@ -26,7 +27,7 @@ export default function Stats() {
             <div className="stats">
                 <Stat stat={content.stats.stat1.number} title={content.stats.stat1.stat_title} />
                 <Stat stat={content.stats.stat2.number} title={content.stats.stat2.stat_title} />
-                <Stat stat={content.stats.stat3.number} title={content.stats.stat3.stat_title} />
+                <Stat stat={content.stats.stat3.number} title={content.stats.stat3.stat_title} symbol="%" />
             </div>
         </div>
     );

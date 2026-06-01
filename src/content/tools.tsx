@@ -1,16 +1,17 @@
-import { FaReact, FaAws } from "react-icons/fa";
+import { FaAws } from "react-icons/fa";
 import { ToolType } from "../components/Sections/Tools/Tool";
 import {
     SiDjango,
     SiFastapi,
-    SiApachecassandra,
     SiPostgresql,
     SiDocker,
     SiApachekafka,
-    SiCss3,
     SiServerless,
     SiAtlassian,
-    SiOpenai,
+    SiCockroachlabs,
+    SiTemporal,
+    SiTypescript,
+    SiClickhouse
 } from "react-icons/si";
 
 // Description of how to add icons:
@@ -23,51 +24,51 @@ import {
 
 export const tools: ToolType[] = [
     {
-        icon: <FaReact />,
-        name: "React",
-    },
-    {
-        icon: <SiDjango />,
-        name: "Django",
-    },
-    {
         icon: <SiFastapi />,
         name: "FastAPI",
     },
     {
-        icon: <FaAws />,
-        name: "AWS",
-    },
-    {
-        icon: <SiPostgresql />,
-        name: "PostgreSQL",
-    },
-    {
-        icon: <SiCss3 />,
-        name: "CSS",
-    },
-    {
-        icon: <SiServerless />,
-        name: "Serverless",
-    },
-    {
-        icon: <SiOpenai />,
-        name: "OpenAI API",
+        icon: <SiTemporal />,
+        name: "Temporal",
     },
     {
         icon: <SiDocker />,
         name: "Docker",
     },
     {
-        icon: <SiAtlassian />,
-        name: "Jira",
+        icon: <SiCockroachlabs />,
+        name: "CockroachDB",
     },
     {
-        icon: <SiApachecassandra />,
-        name: "Cassandra",
+        icon: <SiPostgresql />,
+        name: "PostgreSQL",
+    },
+    {
+        icon: <SiTypescript  />,
+        name: "TypeScript",
+    },
+    {
+        icon: <SiDjango />,
+        name: "Django",
+    },
+    {
+        icon: <FaAws />,
+        name: "AWS",
+    },
+    {
+        icon: <SiClickhouse />,
+        name: "ClickHouse",
     },
     {
         icon: <SiApachekafka />,
         name: "Kafka",
+    },
+    {
+        icon: <SiServerless />,
+        name: "Serverless",
+    },
+    {
+        icon: <SiAtlassian />,
+        name: "Jira/Linear",
     },
 ];

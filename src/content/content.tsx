@@ -19,20 +19,20 @@ const content = {
         // You can change the following accordingly, but make sure not to change
         // the names of the fields, only change content (after the colon ':')
         stat1: {
-            number: 3,
+            number: 4,
             stat_title: "Years of Experience",
         },
         stat2: {
-            number: 15,
-            stat_title: "Projects Completed",
+            number: 500000,
+            stat_title: "Daily Workflows Orchestrated",
         },
         stat3: {
-            number: 550,
-            stat_title: "Code Reviews",
+            number: 100,
+            stat_title: "Workflow Visibility",
         },
     },
     about_me: {
-        text: "I'm a full-stack engineer with experience building scalable web applications using Django, React, and AWS. At Scalers, I've worked across product, infrastructure, and data, leading projects involving microservices, event-driven systems, and integrations with tools like Auth0, Metabase, and Slack. I enjoy working at the intersection of product and engineering, especially where technical decisions directly improve user experience. Alongside backend architecture and cloud deployments, I'm passionate about internal tools, data pipelines, and creating systems that help teams move faster. I care about mentorship, clear documentation, and building with curiosity and care.\n\nOutside of this field, I enjoy running, painting, playing video games, and traveling. :3",
+        text: "I am a backend-focused Senior Software Engineer who loves making complex systems clean, scalable, and predictable. Currently working in the fast-paced world of fintech, my day-to-day involves diving into distributed microservices within a massive monorepo to refactor legacy bottlenecks and optimize performance.\n\nOne of my favorite recent milestones was introducing Temporal to our stack, giving us a highly monitored, visually clear way to orchestrate intricate workflows. For me, senior engineering isn't just about the backend architecture; it’s about the people it serves. I work closely with product teams to ensure our technical decisions translate into a stellar user experience, and I partner with operations to ensure system hitches are diagnosed and resolved instantly.\n\nI’m passionate about technical mentorship, elegant documentation, and building internal tools that help teams move faster.",
     },
     experiences: {
         beginning_content: "Where It Began",
